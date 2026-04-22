@@ -1,0 +1,68 @@
+####################################################
+# 학습 파라미터
+####################################################
+name: "MACE_LAOC_finetuning"
+foundation_model: "mh-1"      # MACE-MH-1 model
+foundation_head: "omat_pbe"   # OMAT24 head (replay dataset과 동일해야함)
+# model_dir: "../Results/$RES_DIR"
+# log_dir: "../Results/$RES_DIR/logs"
+# checkpoint_dir: "../Results/$RES_DIR/checkpoints"
+# results_dir: "../Results/$RES_DIR/results"
+
+
+# 학습할 데이터 (Li-Y-Cl)
+train_file: "train.extxyz"
+valid_file: "valid.extxyz"
+test_file: "test.extxyz"
+# atomic_numbers: "[3, 17, 39]" # Li, Cl, Y의 원자번호 -> replay dataset의 내용과 합쳐져서 역할을 제대로 못함. 의미x
+
+# 학습 가중치 항목
+energy_key: "REF_energy"       # Tag 기준 <- 이전 vasprun2extxyz에서 지정한 내용
+forces_key: "REF_forces"
+energy_weight: 1.0
+forces_weight: 100.0           # Force를 더 크게 설정하여 atomic energy항을 더 잘 학습할 수 있게함 / energy 가중치는 전체 에너지와 관련
+
+E0s: "foundation"              # Atomic energy 기준값 / foundation(MP), average(최소제곱법으로 계산), 직접입력의 방식이 존재
+batch_size: 4                  # Memory, 클수록 빠름
+max_num_epochs: 10             # 학습 반복 횟수, 크면 과적합 작으면 과소적합 발생 가능
+lr : 5e-4                      # Learning rate, 값이 크면 발산 작으면 시간이 오래걸리고 local minima에 빠질 수 있음
+scaling : "rms_forces_scaling" # Activation 값을 Force의 rms값으로 scaling
+loss : "universal"             # 모든 물리량을 고려하여 validation을 진행 <-> weighted : E, F만 고려
+ema: True                      # 가중치 업데이트 시 gradient의 moving average를 계산
+ema_decay: 0.99                # 값이 크면 학습이 느려지고, 작으면 weight가 oscillation
+weight_decay : 1e-6            # L-2 정규화 기법, 특정 가중치 값이 튀는것을 방지, 커지면 over, underfitting이 모두 발생 가능
+amsgrad: True                  # ADAM optimizer 변형, 전체 gradient 최댓값을 조절하여 안정적인 수렴가능
+default_dtype: "float64"       # 정확도를 위한 float64
+device: cuda                   # GPU 사용 <-> cpu
+seed: 42                       # 재현성을 위한 랜덤 시드 고정
+
+# Learninig rate 감소 영역 추가
+stage_two_energy_weight : 100.0
+stage_two_forces_weight : 10.0
+stage_two : True
+stage_two_lr : 5e-5
+
+####################################################
+# LoRA
+####################################################
+# 데이터가 적어서 overfitting  -> rank 2 권장
+# 데이터가 많아서 underfitting -> rank 8, 16 권장
+# lora_rank/lora_alpha의 비율 4로 유지 권장
+lora: True
+lora_rank: 4
+lora_alpha: 1.0
+
+####################################################
+# Multi head replay
+####################################################
+multiheads_finetuning: True # multi head replay fine tuning 수행 -> Naive fine tuning의 경우 False
+force_mh_ft_lr: False       # False 설정시 EMA, LR, E0s등을 Multi head model 기본 옵션으로 고정시킴 (True & 0.99999, 1e-4, Foundation)
+
+# Sampling한 replay dataset
+pt_train_file: "LAOC_selected_replay_combined.xyz" # Naive fine tuning의 경우 주석처리
+
+
+# Stochastic Weight Averaging
+swa: True
+swa_energy_weight: 10.0
+swa_forces_weight: 100.0

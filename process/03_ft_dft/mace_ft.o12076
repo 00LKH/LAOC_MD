@@ -1,0 +1,179 @@
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-04-16 22:46:14 INFO     Start: Parse command line arguments
+Using Materials Project MACE for MACECalculator with /home/kyunghun/.cache/mace/20231210mace128L0_energy_epoch249model
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+2026-04-16 22:46:18 INFO     CUDA version: 12.1, CUDA device: 0
+2026-04-16 22:46:18 INFO     Using head Default out of  ['Default']
+2026-04-16 22:46:18 INFO     Reading /home/kyunghun/02_ft_test/OLD/replay-data-mh-1-omat-pbe.xyz
+2026-04-16 22:48:03 INFO     Filtering configurations based on the finetuning set, filtering type: combinations, elements: ['Al', 'Cl', 'Li', 'O']
+2026-04-16 22:48:08 INFO     Subsample data
+2026-04-16 22:48:08 INFO     Load descriptors
+2026-04-16 22:48:08 INFO     Calculating descriptors
+Calculate descriptors:   0%|          | 0/838 [00:00<?, ?it/s]Calculate descriptors:   0%|          | 1/838 [00:01<23:55,  1.71s/it]Calculate descriptors:   0%|          | 2/838 [00:02<12:45,  1.09it/s]Calculate descriptors:   0%|          | 3/838 [00:04<22:33,  1.62s/it]Calculate descriptors:   0%|          | 4/838 [00:06<26:40,  1.92s/it]Calculate descriptors:   1%|          | 5/838 [00:09<30:27,  2.19s/it]Calculate descriptors:   1%|▏         | 11/838 [00:09<07:35,  1.81it/s]Calculate descriptors:   2%|▏         | 17/838 [00:09<03:45,  3.64it/s]Calculate descriptors:   3%|▎         | 23/838 [00:09<02:15,  6.02it/s]Calculate descriptors:   3%|▎         | 29/838 [00:10<01:29,  9.05it/s]Calculate descriptors:   4%|▍         | 35/838 [00:10<01:02, 12.75it/s]Calculate descriptors:   5%|▍         | 41/838 [00:10<00:46, 17.04it/s]Calculate descriptors:   6%|▌         | 47/838 [00:10<00:36, 21.69it/s]Calculate descriptors:   6%|▋         | 53/838 [00:10<00:29, 26.60it/s]Calculate descriptors:   7%|▋         | 59/838 [00:10<00:24, 31.45it/s]Calculate descriptors:   8%|▊         | 65/838 [00:10<00:21, 35.62it/s]Calculate descriptors:   8%|▊         | 71/838 [00:10<00:19, 39.59it/s]Calculate descriptors:   9%|▉         | 77/838 [00:10<00:17, 42.73it/s]Calculate descriptors:  10%|▉         | 83/838 [00:11<00:16, 45.33it/s]Calculate descriptors:  11%|█         | 89/838 [00:11<00:15, 47.36it/s]Calculate descriptors:  11%|█▏        | 95/838 [00:11<00:15, 48.85it/s]Calculate descriptors:  12%|█▏        | 101/838 [00:11<00:14, 49.81it/s]Calculate descriptors:  13%|█▎        | 107/838 [00:11<00:14, 50.49it/s]Calculate descriptors:  13%|█▎        | 113/838 [00:11<00:14, 50.96it/s]Calculate descriptors:  14%|█▍        | 119/838 [00:11<00:14, 51.25it/s]Calculate descriptors:  15%|█▍        | 125/838 [00:11<00:13, 51.84it/s]Calculate descriptors:  16%|█▌        | 131/838 [00:12<00:13, 51.97it/s]Calculate descriptors:  16%|█▋        | 137/838 [00:12<00:13, 52.02it/s]Calculate descriptors:  17%|█▋        | 143/838 [00:12<00:13, 52.18it/s]Calculate descriptors:  18%|█▊        | 149/838 [00:12<00:13, 52.43it/s]Calculate descriptors:  18%|█▊        | 155/838 [00:12<00:13, 52.51it/s]Calculate descriptors:  19%|█▉        | 161/838 [00:12<00:12, 52.25it/s]Calculate descriptors:  20%|█▉        | 167/838 [00:12<00:13, 50.20it/s]Calculate descriptors:  21%|██        | 173/838 [00:12<00:13, 48.66it/s]Calculate descriptors:  21%|██        | 178/838 [00:12<00:13, 47.53it/s]Calculate descriptors:  22%|██▏       | 183/838 [00:13<00:13, 46.95it/s]Calculate descriptors:  22%|██▏       | 188/838 [00:13<00:13, 46.52it/s]Calculate descriptors:  23%|██▎       | 193/838 [00:13<00:13, 46.31it/s]Calculate descriptors:  24%|██▎       | 198/838 [00:13<00:13, 46.17it/s]Calculate descriptors:  24%|██▍       | 203/838 [00:13<00:13, 45.85it/s]Calculate descriptors:  25%|██▍       | 208/838 [00:13<00:13, 45.92it/s]Calculate descriptors:  25%|██▌       | 213/838 [00:13<00:13, 45.83it/s]Calculate descriptors:  26%|██▌       | 218/838 [00:13<00:13, 45.89it/s]Calculate descriptors:  27%|██▋       | 223/838 [00:13<00:13, 46.01it/s]Calculate descriptors:  27%|██▋       | 229/838 [00:14<00:12, 47.91it/s]Calculate descriptors:  28%|██▊       | 235/838 [00:14<00:12, 49.31it/s]Calculate descriptors:  29%|██▉       | 241/838 [00:14<00:11, 50.43it/s]Calculate descriptors:  29%|██▉       | 247/838 [00:14<00:11, 51.09it/s]Calculate descriptors:  30%|███       | 253/838 [00:14<00:11, 51.47it/s]Calculate descriptors:  31%|███       | 259/838 [00:14<00:11, 51.87it/s]Calculate descriptors:  32%|███▏      | 265/838 [00:14<00:11, 51.73it/s]Calculate descriptors:  32%|███▏      | 271/838 [00:14<00:10, 51.91it/s]Calculate descriptors:  33%|███▎      | 277/838 [00:14<00:10, 52.03it/s]Calculate descriptors:  34%|███▍      | 283/838 [00:15<00:10, 52.26it/s]Calculate descriptors:  34%|███▍      | 289/838 [00:15<00:10, 52.37it/s]Calculate descriptors:  35%|███▌      | 295/838 [00:15<00:10, 52.59it/s]Calculate descriptors:  36%|███▌      | 301/838 [00:15<00:10, 52.43it/s]Calculate descriptors:  37%|███▋      | 307/838 [00:15<00:10, 52.59it/s]Calculate descriptors:  37%|███▋      | 313/838 [00:15<00:09, 52.82it/s]Calculate descriptors:  38%|███▊      | 319/838 [00:15<00:09, 52.79it/s]Calculate descriptors:  39%|███▉      | 325/838 [00:15<00:09, 51.68it/s]Calculate descriptors:  39%|███▉      | 331/838 [00:16<00:09, 51.69it/s]Calculate descriptors:  40%|████      | 337/838 [00:16<00:09, 52.11it/s]Calculate descriptors:  41%|████      | 343/838 [00:16<00:09, 52.30it/s]Calculate descriptors:  42%|████▏     | 349/838 [00:16<00:09, 52.56it/s]Calculate descriptors:  42%|████▏     | 355/838 [00:16<00:09, 52.55it/s]Calculate descriptors:  43%|████▎     | 361/838 [00:16<00:09, 52.61it/s]Calculate descriptors:  44%|████▍     | 367/838 [00:16<00:09, 52.29it/s]Calculate descriptors:  45%|████▍     | 373/838 [00:16<00:08, 52.39it/s]Calculate descriptors:  45%|████▌     | 379/838 [00:16<00:08, 52.70it/s]Calculate descriptors:  46%|████▌     | 385/838 [00:17<00:08, 52.65it/s]Calculate descriptors:  47%|████▋     | 391/838 [00:17<00:08, 52.67it/s]Calculate descriptors:  47%|████▋     | 397/838 [00:17<00:08, 52.72it/s]Calculate descriptors:  48%|████▊     | 403/838 [00:17<00:08, 52.50it/s]Calculate descriptors:  49%|████▉     | 409/838 [00:17<00:08, 52.50it/s]Calculate descriptors:  50%|████▉     | 415/838 [00:17<00:08, 52.76it/s]Calculate descriptors:  50%|█████     | 421/838 [00:17<00:07, 52.50it/s]Calculate descriptors:  51%|█████     | 427/838 [00:17<00:07, 52.72it/s]Calculate descriptors:  52%|█████▏    | 433/838 [00:17<00:07, 52.89it/s]Calculate descriptors:  52%|█████▏    | 439/838 [00:18<00:07, 52.74it/s]Calculate descriptors:  53%|█████▎    | 445/838 [00:18<00:07, 52.70it/s]Calculate descriptors:  54%|█████▍    | 451/838 [00:18<00:07, 52.54it/s]Calculate descriptors:  55%|█████▍    | 457/838 [00:18<00:07, 51.89it/s]Calculate descriptors:  55%|█████▌    | 463/838 [00:18<00:07, 52.11it/s]Calculate descriptors:  56%|█████▌    | 469/838 [00:18<00:07, 52.23it/s]Calculate descriptors:  57%|█████▋    | 475/838 [00:18<00:06, 52.53it/s]Calculate descriptors:  57%|█████▋    | 481/838 [00:18<00:06, 52.73it/s]Calculate descriptors:  58%|█████▊    | 487/838 [00:18<00:06, 52.61it/s]Calculate descriptors:  59%|█████▉    | 493/838 [00:19<00:06, 52.47it/s]Calculate descriptors:  60%|█████▉    | 499/838 [00:19<00:06, 52.10it/s]Calculate descriptors:  60%|██████    | 505/838 [00:19<00:06, 52.30it/s]Calculate descriptors:  61%|██████    | 511/838 [00:19<00:06, 52.61it/s]Calculate descriptors:  62%|██████▏   | 517/838 [00:19<00:06, 52.79it/s]Calculate descriptors:  62%|██████▏   | 523/838 [00:19<00:05, 52.97it/s]Calculate descriptors:  63%|██████▎   | 529/838 [00:19<00:05, 53.17it/s]Calculate descriptors:  64%|██████▍   | 535/838 [00:19<00:05, 52.36it/s]Calculate descriptors:  65%|██████▍   | 541/838 [00:19<00:05, 52.21it/s]Calculate descriptors:  65%|██████▌   | 547/838 [00:20<00:05, 52.23it/s]Calculate descriptors:  66%|██████▌   | 553/838 [00:20<00:05, 52.40it/s]Calculate descriptors:  67%|██████▋   | 559/838 [00:20<00:05, 52.53it/s]Calculate descriptors:  67%|██████▋   | 565/838 [00:20<00:05, 52.40it/s]Calculate descriptors:  68%|██████▊   | 571/838 [00:20<00:05, 51.97it/s]Calculate descriptors:  69%|██████▉   | 577/838 [00:20<00:04, 52.28it/s]Calculate descriptors:  70%|██████▉   | 583/838 [00:20<00:04, 52.42it/s]Calculate descriptors:  70%|███████   | 589/838 [00:20<00:04, 52.67it/s]Calculate descriptors:  71%|███████   | 595/838 [00:21<00:04, 52.23it/s]Calculate descriptors:  72%|███████▏  | 601/838 [00:21<00:04, 52.24it/s]Calculate descriptors:  72%|███████▏  | 607/838 [00:21<00:04, 52.22it/s]Calculate descriptors:  73%|███████▎  | 613/838 [00:21<00:04, 52.25it/s]Calculate descriptors:  74%|███████▍  | 619/838 [00:21<00:04, 52.48it/s]Calculate descriptors:  75%|███████▍  | 625/838 [00:21<00:04, 52.37it/s]Calculate descriptors:  75%|███████▌  | 631/838 [00:21<00:03, 52.43it/s]Calculate descriptors:  76%|███████▌  | 637/838 [00:21<00:03, 52.56it/s]Calculate descriptors:  77%|███████▋  | 643/838 [00:21<00:03, 52.76it/s]Calculate descriptors:  77%|███████▋  | 649/838 [00:22<00:03, 52.44it/s]Calculate descriptors:  78%|███████▊  | 655/838 [00:22<00:03, 52.61it/s]Calculate descriptors:  79%|███████▉  | 661/838 [00:22<00:03, 52.71it/s]Calculate descriptors:  80%|███████▉  | 667/838 [00:22<00:03, 52.69it/s]Calculate descriptors:  80%|████████  | 673/838 [00:22<00:03, 52.69it/s]Calculate descriptors:  81%|████████  | 679/838 [00:22<00:03, 52.89it/s]Calculate descriptors:  82%|████████▏ | 685/838 [00:22<00:02, 52.92it/s]Calculate descriptors:  82%|████████▏ | 691/838 [00:22<00:02, 52.98it/s]Calculate descriptors:  83%|████████▎ | 697/838 [00:22<00:02, 52.28it/s]Calculate descriptors:  84%|████████▍ | 703/838 [00:23<00:02, 52.61it/s]Calculate descriptors:  85%|████████▍ | 709/838 [00:23<00:02, 52.71it/s]Calculate descriptors:  85%|████████▌ | 715/838 [00:23<00:02, 52.67it/s]Calculate descriptors:  86%|████████▌ | 721/838 [00:23<00:02, 52.71it/s]Calculate descriptors:  87%|████████▋ | 727/838 [00:23<00:02, 52.71it/s]Calculate descriptors:  87%|████████▋ | 733/838 [00:23<00:01, 52.75it/s]Calculate descriptors:  88%|████████▊ | 739/838 [00:23<00:01, 52.83it/s]Calculate descriptors:  89%|████████▉ | 745/838 [00:23<00:01, 52.51it/s]Calculate descriptors:  90%|████████▉ | 751/838 [00:23<00:01, 52.46it/s]Calculate descriptors:  90%|█████████ | 757/838 [00:24<00:01, 52.12it/s]Calculate descriptors:  91%|█████████ | 763/838 [00:24<00:01, 52.36it/s]Calculate descriptors:  92%|█████████▏| 769/838 [00:24<00:01, 52.35it/s]Calculate descriptors:  92%|█████████▏| 775/838 [00:24<00:01, 52.58it/s]Calculate descriptors:  93%|█████████▎| 781/838 [00:24<00:01, 52.68it/s]Calculate descriptors:  94%|█████████▍| 787/838 [00:24<00:00, 52.45it/s]Calculate descriptors:  95%|█████████▍| 793/838 [00:24<00:00, 52.63it/s]Calculate descriptors:  95%|█████████▌| 799/838 [00:24<00:00, 52.79it/s]Calculate descriptors:  96%|█████████▌| 805/838 [00:25<00:00, 52.76it/s]Calculate descriptors:  97%|█████████▋| 811/838 [00:25<00:00, 52.79it/s]Calculate descriptors:  97%|█████████▋| 817/838 [00:25<00:00, 52.84it/s]Calculate descriptors:  98%|█████████▊| 823/838 [00:25<00:00, 52.63it/s]Calculate descriptors:  99%|█████████▉| 829/838 [00:25<00:00, 52.83it/s]Calculate descriptors: 100%|█████████▉| 835/838 [00:25<00:00, 53.05it/s]Calculate descriptors: 100%|██████████| 838/838 [00:25<00:00, 32.68it/s]
+2026-04-16 22:48:34 INFO     Selecting 500 configurations out of 838 using Farthest Point Sampling
+2026-04-16 22:48:34 INFO     Assemble descriptors///
+Assembling descriptors: 0it [00:00, ?it/s]Assembling descriptors: 838it [00:00, 175776.49it/s]
+2026-04-16 22:48:34 INFO     descriptor_dataset_reshaped.shape=(838, 1024)
+2026-04-16 22:48:34 INFO     n_samples: 500
+2026-04-16 22:48:34 ERROR    FPS failed, selecting random configurations instead: name 'fpsample' is not defined
+2026-04-16 22:48:34 INFO     Saving descriptors at replay-data-mh-1-omat-pbe_descriptors.npy
+2026-04-16 22:48:34 INFO     Saving the selected configurations
+2026-04-16 22:48:34 INFO     Saving a combined XYZ file
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Starting MACE finetuning with config: config.yml
+2026-04-16 22:48:39.976 INFO: ===========VERIFYING SETTINGS===========
+2026-04-16 22:48:39.976 INFO: MACE version: 0.3.15
+2026-04-16 22:48:42.287 INFO: CUDA version: 12.1, CUDA device: 0
+2026-04-16 22:48:42.490 INFO: Using foundation model mace mh-1 as initial checkpoint.
+Using Materials Project MACE for MACECalculator with /home/kyunghun/.cache/mace/macemh1model
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+2026-04-16 22:48:44.004 INFO: CUDA version: 12.1, CUDA device: 0
+2026-04-16 22:48:44.007 INFO: Using head omat_pbe out of  ['matpes_r2scan', 'mp_pbe_refit_add', 'spice_wB97M', 'oc20_usemppbe', 'omol', 'omat_pbe']
+2026-04-16 22:48:44.007 INFO: Multihead finetuning mode, setting learning rate to 0.0001 and EMA to True. To use a different learning rate, set --force_mh_ft_lr=True.
+2026-04-16 22:48:44.008 INFO: Using multiheads finetuning mode, setting learning rate to 0.0001 and EMA to True
+2026-04-16 22:48:44.008 INFO: Selecting the head omat_pbe as foundation head.
+2026-04-16 22:48:47.216 INFO: ===========LOADING INPUT DATA===========
+2026-04-16 22:48:47.216 INFO: Using heads: ['Default', 'pt_head']
+2026-04-16 22:48:47.216 INFO: Using the key specifications to parse data:
+2026-04-16 22:48:47.216 INFO: Default: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'total_charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2026-04-16 22:48:47.216 INFO: pt_head: KeySpecification(info_keys={'energy': 'REF_energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'total_charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'REF_forces', 'charges': 'REF_charges'})
+2026-04-16 22:48:47.216 INFO: =============    Processing head Default     ===========
+2026-04-16 22:48:47.233 INFO: Training set 1/1 [energy: 6, stress: 6, virials: 0, dipole components: 0, head: 6, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 6, charges: 0]
+2026-04-16 22:48:47.233 INFO: Total Training set [energy: 6, stress: 6, virials: 0, dipole components: 0, head: 6, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 6, charges: 0]
+2026-04-16 22:48:47.235 INFO: Validation set 1/1 [energy: 1, stress: 1, virials: 0, dipole components: 0, head: 1, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 1, charges: 0]
+2026-04-16 22:48:47.236 INFO: Total Validation set [energy: 1, stress: 1, virials: 0, dipole components: 0, head: 1, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 1, charges: 0]
+2026-04-16 22:48:47.238 INFO: Test set 1/1 [energy: 1, stress: 1, virials: 0, dipole components: 0, head: 1, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 1, charges: 0]
+2026-04-16 22:48:47.239 INFO: Total Test set [energy: 1, stress: 1, virials: 0, dipole components: 0, head: 1, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 1, charges: 0]
+2026-04-16 22:48:47.239 INFO: Total number of configurations: train=6, valid=1, tests=[Default_Default: 1],
+2026-04-16 22:48:47.239 INFO: =============    Processing head pt_head     ===========
+2026-04-16 22:48:47.421 INFO: Training set 1/1 [energy: 506, stress: 506, virials: 0, dipole components: 0, head: 506, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 506, charges: 0]
+2026-04-16 22:48:47.425 INFO: Total Training set [energy: 506, stress: 506, virials: 0, dipole components: 0, head: 506, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 506, charges: 0]
+2026-04-16 22:48:47.425 INFO: No validation set provided, splitting training data instead.
+2026-04-16 22:48:47.425 INFO: Using random 10% of training set for validation with indices saved in: ./MACE_LAOC_finetuning_valid_indices_42.txt
+2026-04-16 22:48:47.428 INFO: Random Split Training set [energy: 456, stress: 456, virials: 0, dipole components: 0, head: 456, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 456, charges: 0]
+2026-04-16 22:48:47.429 INFO: Random Split Validation set [energy: 50, stress: 50, virials: 0, dipole components: 0, head: 50, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 50, charges: 0]
+2026-04-16 22:48:47.429 INFO: Total number of configurations: train=456, valid=50, tests=[],
+2026-04-16 22:48:47.429 INFO: ==================Using multiheads finetuning mode==================
+2026-04-16 22:48:47.429 WARNING: Ratio of the number of configurations in the training set and the in the pt_train_file is 0.013157894736842105, increasing the number of configurations in the fine-tuning heads by 7
+2026-04-16 22:48:47.429 INFO: Total number of configurations in pretraining: train=456, valid=50
+2026-04-16 22:48:47.431 INFO: Atomic Numbers used: [3, 8, 13, 17]
+2026-04-16 22:48:47.435 INFO: Atomic Energies used (z: eV) for head Default: {3: -0.27926212549209595, 8: -1.7050248384475708, 13: -0.2114296704530716, 17: -0.25740036368370056}
+2026-04-16 22:48:47.435 INFO: Atomic Energies used (z: eV) for head pt_head: {3: -0.27926212549209595, 8: -1.7050248384475708, 13: -0.2114296704530716, 17: -0.25740036368370056}
+2026-04-16 22:48:47.435 INFO: Processing datasets for head 'Default'
+2026-04-16 22:48:47.587 INFO: Combining 1 list datasets for head 'Default'
+2026-04-16 22:48:47.590 INFO: Combining 1 list datasets for head 'Default_valid'
+2026-04-16 22:48:47.590 INFO: Combined validation datasets for Default
+2026-04-16 22:48:47.590 INFO: Head 'Default' training dataset size: 48
+2026-04-16 22:48:47.591 INFO: Processing datasets for head 'pt_head'
+2026-04-16 22:48:48.025 INFO: Combining 1 list datasets for head 'pt_head'
+2026-04-16 22:48:48.070 INFO: Head 'pt_head' training dataset size: 456
+2026-04-16 22:48:48.071 INFO: Average number of neighbors: 30.0
+2026-04-16 22:48:48.071 INFO: During training the following quantities will be reported: energy, forces, stress
+2026-04-16 22:48:48.071 INFO: ===========MODEL DETAILS===========
+2026-04-16 22:48:48.500 INFO: Loading FOUNDATION model
+2026-04-16 22:48:48.501 INFO: Using filtered elements: [3, 8, 13, 17]
+2026-04-16 22:48:48.501 INFO: Model configuration extracted from foundation model
+2026-04-16 22:48:48.501 INFO: Using universal loss function for fine-tuning
+2026-04-16 22:48:48.501 INFO: Message passing with hidden irreps 512x0e+512x1o)
+2026-04-16 22:48:48.501 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-04-16 22:48:48.501 INFO: Radial cutoff: 6.0 A (total receptive field for each atom: 12.0 A)
+2026-04-16 22:48:48.501 INFO: Distance transform for radial basis functions: Agnesi
+2026-04-16 22:48:51.826 INFO: Injecting LoRA layers with rank=4 and alpha=1.0
+2026-04-16 22:48:51.828 INFO: Original model has 6186960 trainable parameters.
+2026-04-16 22:48:53.401 INFO: Model with LoRA has 6346200 trainable parameters.
+2026-04-16 22:48:53.401 INFO: ===========OPTIMIZER INFORMATION===========
+2026-04-16 22:48:53.401 INFO: Using ADAM as parameter optimizer
+2026-04-16 22:48:53.401 INFO: Batch size: 4
+2026-04-16 22:48:53.401 INFO: Using Exponential Moving Average with decay: 0.99999
+2026-04-16 22:48:53.401 INFO: Number of gradient updates: 1260
+2026-04-16 22:48:53.401 INFO: Learning rate: 0.0001, weight decay: 1e-06
+2026-04-16 22:48:53.401 INFO: UniversalLoss(energy_weight=1.000, forces_weight=100.000, stress_weight=1.000)
+2026-04-16 22:48:53.403 INFO: === Layer's learning rates ===
+2026-04-16 22:48:53.403 INFO: Param group 0: lr = 0.0001
+2026-04-16 22:48:53.403 INFO: Param group 1: lr = 0.0001
+2026-04-16 22:48:53.403 INFO: Param group 2: lr = 0.0001
+2026-04-16 22:48:53.403 INFO: Param group 3: lr = 0.0001
+2026-04-16 22:48:53.404 INFO: Param group 4: lr = 0.0001
+2026-04-16 22:48:53.404 INFO: Stage Two (after 6 epochs) with loss function: UniversalLoss(energy_weight=10.000, forces_weight=100.000, stress_weight=10.000), with energy weight : 10.0, forces weight : 100.0, stress weight : 10.0 and learning rate : 5e-05
+2026-04-16 22:48:53.723 INFO: Using gradient clipping with tolerance=10.000
+2026-04-16 22:48:53.724 INFO: 
+2026-04-16 22:48:53.724 INFO: ===========TRAINING===========
+2026-04-16 22:48:53.724 INFO: Started training, reporting errors on validation set
+2026-04-16 22:48:53.724 INFO: Loss metrics on validation set
+2026-04-16 22:49:06.069 INFO: Initial: head: pt_head, loss=0.00000000, RMSE_E_per_atom=    0.00 meV, RMSE_F=    0.00 meV / A, RMSE_stress=    0.00 meV / A^3
+2026-04-16 22:49:07.446 INFO: Initial: head: Default, loss=0.02687528, RMSE_E_per_atom=  132.07 meV, RMSE_F=   38.46 meV / A, RMSE_stress=    5.60 meV / A^3
+2026-04-16 22:49:54.025 INFO: Epoch 0: head: pt_head, loss=0.00006396, RMSE_E_per_atom=    3.33 meV, RMSE_F=    3.78 meV / A, RMSE_stress=    0.30 meV / A^3
+2026-04-16 22:49:54.179 INFO: Epoch 0: head: Default, loss=0.02479317, RMSE_E_per_atom=  130.05 meV, RMSE_F=   36.07 meV / A, RMSE_stress=    5.84 meV / A^3
+2026-04-16 22:50:29.421 INFO: Epoch 1: head: pt_head, loss=0.00006918, RMSE_E_per_atom=    5.43 meV, RMSE_F=    4.00 meV / A, RMSE_stress=    0.51 meV / A^3
+2026-04-16 22:50:29.578 INFO: Epoch 1: head: Default, loss=0.02312593, RMSE_E_per_atom=  128.92 meV, RMSE_F=   34.12 meV / A, RMSE_stress=    6.00 meV / A^3
+2026-04-16 22:51:06.061 INFO: Epoch 2: head: pt_head, loss=0.00010042, RMSE_E_per_atom=    6.06 meV, RMSE_F=    4.74 meV / A, RMSE_stress=    0.60 meV / A^3
+2026-04-16 22:51:06.218 INFO: Epoch 2: head: Default, loss=0.02219535, RMSE_E_per_atom=  125.15 meV, RMSE_F=   33.02 meV / A, RMSE_stress=    6.07 meV / A^3
+2026-04-16 22:51:43.552 INFO: Epoch 3: head: pt_head, loss=0.00006236, RMSE_E_per_atom=    6.71 meV, RMSE_F=    3.66 meV / A, RMSE_stress=    0.70 meV / A^3
+2026-04-16 22:51:43.707 INFO: Epoch 3: head: Default, loss=0.02152938, RMSE_E_per_atom=  122.94 meV, RMSE_F=   32.20 meV / A, RMSE_stress=    6.18 meV / A^3
+2026-04-16 22:52:21.315 INFO: Epoch 4: head: pt_head, loss=0.00007121, RMSE_E_per_atom=    6.26 meV, RMSE_F=    4.01 meV / A, RMSE_stress=    0.80 meV / A^3
+2026-04-16 22:52:21.471 INFO: Epoch 4: head: Default, loss=0.02109418, RMSE_E_per_atom=  120.88 meV, RMSE_F=   31.68 meV / A, RMSE_stress=    6.21 meV / A^3
+2026-04-16 22:52:59.009 INFO: Epoch 5: head: pt_head, loss=0.00004259, RMSE_E_per_atom=    5.99 meV, RMSE_F=    3.03 meV / A, RMSE_stress=    0.87 meV / A^3
+2026-04-16 22:52:59.165 INFO: Epoch 5: head: Default, loss=0.02084107, RMSE_E_per_atom=  119.06 meV, RMSE_F=   31.38 meV / A, RMSE_stress=    6.24 meV / A^3
+2026-04-16 22:52:59.265 INFO: Changing loss based on Stage Two Weights
+2026-04-16 22:53:34.493 INFO: Epoch 6: head: pt_head, loss=0.00004603, RMSE_E_per_atom=    4.48 meV, RMSE_F=    2.86 meV / A, RMSE_stress=    0.98 meV / A^3
+2026-04-16 22:53:34.644 INFO: Epoch 6: head: Default, loss=0.03083654, RMSE_E_per_atom=  115.94 meV, RMSE_F=   31.21 meV / A, RMSE_stress=    6.25 meV / A^3
+2026-04-16 22:54:08.684 INFO: Epoch 7: head: pt_head, loss=0.00003640, RMSE_E_per_atom=    2.52 meV, RMSE_F=    2.74 meV / A, RMSE_stress=    1.11 meV / A^3
+2026-04-16 22:54:08.836 INFO: Epoch 7: head: Default, loss=0.03028429, RMSE_E_per_atom=  111.21 meV, RMSE_F=   31.09 meV / A, RMSE_stress=    6.23 meV / A^3
+2026-04-16 22:54:42.827 INFO: Epoch 8: head: pt_head, loss=0.00003535, RMSE_E_per_atom=    1.97 meV, RMSE_F=    2.76 meV / A, RMSE_stress=    1.13 meV / A^3
+2026-04-16 22:54:42.978 INFO: Epoch 8: head: Default, loss=0.02979757, RMSE_E_per_atom=  107.11 meV, RMSE_F=   30.97 meV / A, RMSE_stress=    6.22 meV / A^3
+2026-04-16 22:55:17.158 INFO: Epoch 9: head: pt_head, loss=0.00003584, RMSE_E_per_atom=    1.84 meV, RMSE_F=    2.80 meV / A, RMSE_stress=    1.07 meV / A^3
+2026-04-16 22:55:17.310 INFO: Epoch 9: head: Default, loss=0.02930763, RMSE_E_per_atom=  103.24 meV, RMSE_F=   30.83 meV / A, RMSE_stress=    6.23 meV / A^3
+2026-04-16 22:55:17.408 INFO: Training complete
+2026-04-16 22:55:17.408 INFO: 
+2026-04-16 22:55:17.408 INFO: ===========RESULTS===========
+2026-04-16 22:55:17.413 INFO: Loading checkpoint: ./checkpoints/MACE_LAOC_finetuning_run-42_epoch-5.pt
+2026-04-16 22:55:17.524 INFO: Loaded Stage one model from epoch 5 for evaluation
+2026-04-16 22:55:17.525 INFO: Saving model to checkpoints/MACE_LAOC_finetuning_run-42.model
+2026-04-16 22:55:17.819 INFO: Merging LoRA weights into base model
+2026-04-16 22:55:18.071 INFO: Compiling model, saving metadata to MACE_LAOC_finetuning_compiled.model
+2026-04-16 22:55:19.334 INFO: Computing metrics for training, validation, and test sets
+2026-04-16 22:55:19.336 INFO: Skipping evaluation for heads: ['pt_head']
+2026-04-16 22:55:19.336 INFO: Evaluating train_Default ...
+2026-04-16 22:55:25.051 INFO: Skipping evaluation of train_pt_head (in skip_heads list)
+2026-04-16 22:55:25.051 INFO: Evaluating valid_Default ...
+2026-04-16 22:55:25.210 INFO: Skipping evaluation of valid_pt_head (in skip_heads list)
+2026-04-16 22:55:25.217 INFO: Error-table on TRAIN and VALID:
++---------------+---------------------+------------------+-------------------+---------------------------------------+
+|  config_type  | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % | RMSE Stress (Virials) / meV / A (A^3) |
++---------------+---------------------+------------------+-------------------+---------------------------------------+
+| train_Default |          126.4      |         34.4     |          3.48     |                     6.9               |
+| valid_Default |          119.1      |         31.4     |          3.47     |                     6.2               |
++---------------+---------------------+------------------+-------------------+---------------------------------------+
+2026-04-16 22:55:25.217 INFO: Evaluating Default_Default ...
+2026-04-16 22:55:25.417 INFO: Error-table on TEST:
++-----------------+---------------------+------------------+-------------------+---------------------------------------+
+|   config_type   | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % | RMSE Stress (Virials) / meV / A (A^3) |
++-----------------+---------------------+------------------+-------------------+---------------------------------------+
+| Default_Default |          142.5      |         30.3     |          3.31     |                     7.7               |
++-----------------+---------------------+------------------+-------------------+---------------------------------------+
+2026-04-16 22:55:48.158 INFO: Loading checkpoint: ./checkpoints/MACE_LAOC_finetuning_run-42_epoch-9_swa.pt
+2026-04-16 22:55:48.263 INFO: Loaded Stage two model from epoch 9 for evaluation
+2026-04-16 22:55:48.264 INFO: Saving model to checkpoints/MACE_LAOC_finetuning_run-42_stagetwo.model
+2026-04-16 22:55:48.550 INFO: Merging LoRA weights into base model
+2026-04-16 22:55:48.787 INFO: Compiling model, saving metadata MACE_LAOC_finetuning_stagetwo_compiled.model
+2026-04-16 22:55:49.999 INFO: Computing metrics for training, validation, and test sets
+2026-04-16 22:55:50.000 INFO: Skipping evaluation for heads: ['pt_head']
+2026-04-16 22:55:50.001 INFO: Evaluating train_Default ...
+2026-04-16 22:55:55.601 INFO: Skipping evaluation of train_pt_head (in skip_heads list)
+2026-04-16 22:55:55.602 INFO: Evaluating valid_Default ...
+2026-04-16 22:55:55.761 INFO: Skipping evaluation of valid_pt_head (in skip_heads list)
+2026-04-16 22:55:55.762 INFO: Error-table on TRAIN and VALID:
++---------------+---------------------+------------------+-------------------+---------------------------------------+
+|  config_type  | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % | RMSE Stress (Virials) / meV / A (A^3) |
++---------------+---------------------+------------------+-------------------+---------------------------------------+
+| train_Default |          110.5      |         33.5     |          3.39     |                     6.9               |
+| valid_Default |          103.2      |         30.8     |          3.41     |                     6.2               |
++---------------+---------------------+------------------+-------------------+---------------------------------------+
+2026-04-16 22:55:55.762 INFO: Evaluating Default_Default ...
+2026-04-16 22:55:55.948 INFO: Error-table on TEST:
++-----------------+---------------------+------------------+-------------------+---------------------------------------+
+|   config_type   | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % | RMSE Stress (Virials) / meV / A (A^3) |
++-----------------+---------------------+------------------+-------------------+---------------------------------------+
+| Default_Default |          126.2      |         29.5     |          3.22     |                     7.7               |
++-----------------+---------------------+------------------+-------------------+---------------------------------------+
+2026-04-16 22:56:18.352 INFO: Done
