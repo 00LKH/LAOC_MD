@@ -198,6 +198,6 @@ with plt.style.context(["science", "notebook"]):
     plt.tight_layout()
     # 전체 요약 이미지 저장
     summary_plot_path = os.path.join(RUN_DIR, "Figure3_extract.png")
+    plt.show()
     plt.savefig(summary_plot_path, dpi=300)
-    # plt.show()
     print(f"\n[체크] 모든 구조의 에너지 분포가 {summary_plot_path}에 통합 저장되었습니다.")
