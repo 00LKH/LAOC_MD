@@ -1,8 +1,10 @@
+## Analysis ## Analysis ## Analysis ## Analysis ## Analysis ## Analysis ## Analysis ## Analysis 
 import os
 import glob
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import scienceplots
 from ase.io import read, write
 from ase.neighborlist import neighbor_list
 from ase.data import covalent_radii, atomic_numbers
@@ -152,10 +154,6 @@ for folder in target_folders:
 # ==========================================
 print("\n[완료] 데이터 분석 완료. 시각화 자료를 생성합니다...")
 
-# # CSV 저장
-# df_comp = pd.DataFrame(composition_data).sort_values(by='x_val')
-# df_comp.to_csv("composition_summary.csv", index=False)
-
 # CSV 저장
 df_comp = pd.DataFrame(composition_data)
 
@@ -165,68 +163,74 @@ if not df_comp.empty:
 
 df_comp.to_csv("composition_summary.csv", index=False)
 
-
 # Figure 1: 누적 막대 그래프
-fig1, ax1 = plt.subplots(figsize=(8, 6))
-x_labels = [f"{x:.2f}" for x in df_comp['x_val']]
-bar_0b = df_comp['0b_Ratio(%)'].values
-bar_1b = df_comp['1b_Ratio(%)'].values
-bar_2b = df_comp['2b_Ratio(%)'].values
+with plt.style.context(["science", "notebook"]):
+    fig1, ax1 = plt.subplots(figsize=(16, 6))
+    x_labels = [f"LAOC_{x:.1f}B" for x in df_comp['x_val']]
+    bar_0b = df_comp['0b_Ratio(%)'].values
+    bar_1b = df_comp['1b_Ratio(%)'].values
+    bar_2b = df_comp['2b_Ratio(%)'].values
 
-ax1.bar(x_labels, bar_0b, label='0b (Intact, 2 Cl)', color='tab:blue')
-ax1.bar(x_labels, bar_1b, bottom=bar_0b, label='1b (1 Cl removed)', color='tab:orange')
-ax1.bar(x_labels, bar_2b, bottom=bar_0b + bar_1b, label='2b (2 Cl removed)', color='tab:red')
+    ax1.bar(x_labels, bar_0b, label='0b (0 Cl removed)', color='C0')
+    ax1.bar(x_labels, bar_1b, bottom=bar_0b, label='1b (1 Cl removed)', color='C1')
+    ax1.bar(x_labels, bar_2b, bottom=bar_0b + bar_1b, label='2b (2 Cl removed)', color='C2')
 
-ax1.set_xlabel("Global Composition (x)", fontsize=12)
-ax1.set_ylabel("Percentage of Mid-Al (%)", fontsize=12)
-ax1.set_title("Defect Distribution on Central Al (Initial Structure)", fontsize=14, fontweight='bold')
-ax1.legend(loc='upper right', bbox_to_anchor=(1.35, 1))
-plt.tight_layout()
-fig1.savefig("Figure1_Defect_Ratio.png", dpi=300)
+    # ax1.set_xlabel("Global Composition (x)")
+    ax1.set_ylabel("0b : 1b : 2b ratio (%)")
+    
+    # [수정됨] 범례를 그래프 안쪽 우측 상단에 배치하고, 배경을 반투명(alpha=0.7)하게 설정
+    ax1.legend(loc='upper right', frameon=True, framealpha=0.7, edgecolor='white')
+    
+    plt.tight_layout()
+    # plt.show()
+    fig1.savefig("Figure1_Defect_Ratio.png", dpi=300)
 
 # ==========================================
-# 4. 데이터 시각화 (Figure 2: MD 궤적 다중 Subplot)
+# 4. 데이터 시각화 (Figure 2: MD 궤적 Subplot)
 # ==========================================
 num_plots = len(md_plot_data)
 if num_plots > 0:
-    fig2, axs = plt.subplots(num_plots, 3, figsize=(16, 3 * num_plots), sharex=True)
-    if num_plots == 1: axs = np.expand_dims(axs, axis=0) # 1행 방어코드
+    with plt.style.context(["science", "notebook"]):
+        # [수정됨] 범례가 들어갈 공간을 확보하기 위해 가로 길이를 16으로 약간 늘림
+        fig2, axs = plt.subplots(1, 2, figsize=(16, 5))
 
-    sorted_x_vals = sorted(md_plot_data.keys())
+        sorted_x_vals = sorted(md_plot_data.keys())
 
-    for row, x_val in enumerate(sorted_x_vals):
-        data = md_plot_data[x_val]
-        fr = data['frames']
+        for idx, x_val in enumerate(sorted_x_vals):
+            data = md_plot_data[x_val]
+            fr = data['frames']
+            
+            # [수정됨] 라벨 이름 변경 (예: x=0.2 -> LAOC_0.2b)
+            # ':g' 포맷을 사용하면 0.20의 불필요한 0을 지워 0.2로 깔끔하게 출력합니다.
+            label_name = f'LAOC_{x_val:g}B' 
+
+            # Col 0, Col 1 플롯 그리기
+            axs[0].plot(fr, data['max_dists'], label=label_name, linewidth=4)
+            axs[1].plot(fr, data['bridge_counts'], label=label_name, linewidth=4)
+
+        # Cutoff 라인은 플롯에 한 번만 추가
+        axs[0].axhline(y=AL_O_BOND_CUTOFF, color='black', linestyle='--', label='Bond Cutoff')#, alpha=0.5
+        axs[0].axhline(y=AL_O_HOOKEAN_RT, color='blue', linestyle=':', label='Hookean')#, alpha=0.5
+
+        # 첫 번째 그래프 축 설정
+        # axs[0].set_title("1. Chain Stability (Max Al-O)")
+        axs[0].set_ylabel("Max Al-O (Å)")
+        axs[0].set_xlabel("Time")
+        # [수정됨] 범례를 그래프 우측 바깥으로 이동
+        axs[0].legend(fontsize=9, loc='upper left', bbox_to_anchor=(1.02, 1), frameon=True) 
+
+        # 두 번째 그래프 축 설정
+        # axs[1].set_title("2. Intra-Chain Bridging Cl Count")
+        axs[1].set_ylabel("# of Bridging Cl")
+        axs[1].set_xlabel("Time")
+        # [수정됨] 범례를 그래프 우측 바깥으로 이동
+        axs[1].legend(fontsize=9, loc='upper left', bbox_to_anchor=(1.02, 1), frameon=True)
+
+        plt.tight_layout()
+        # plt.show()
         
-        # Col 0: 체인 유지 및 Hookean
-        axs[row, 0].plot(fr, data['max_dists'], color='tab:red')
-        axs[row, 0].axhline(y=AL_O_BOND_CUTOFF, color='black', linestyle='--', alpha=0.5, label='Bond Cutoff')
-        axs[row, 0].axhline(y=AL_O_HOOKEAN_RT, color='blue', linestyle=':', alpha=0.5, label='Hookean')
-        axs[row, 0].set_ylabel(f"[x={x_val:.2f}]\nMax Al-O (Å)", fontsize=11, fontweight='bold')
-        axs[row, 0].grid(True, linestyle='--', alpha=0.5)
-        
-        # Col 1: 브릿징 개수
-        axs[row, 1].plot(fr, data['bridge_counts'], color='tab:green')
-        axs[row, 1].set_ylabel("Bridge Count", fontsize=11)
-        axs[row, 1].grid(True, linestyle='--', alpha=0.5)
-        
-        # Col 2: 브릿징 대칭성 (Delta)
-        # NaN 값은 선을 끊어서 그림 (브릿지가 없는 구간)
-        axs[row, 2].plot(fr, data['avg_deltas'], color='tab:purple', marker='o', markersize=2, linestyle='-')
-        axs[row, 2].set_ylabel("Asymmetry Δ (Å)", fontsize=11)
-        axs[row, 2].grid(True, linestyle='--', alpha=0.5)
-
-    # Title & Legend
-    axs[0, 0].set_title("1. Chain Stability (Max Al-O)", fontsize=13, fontweight='bold')
-    axs[0, 0].legend(loc='upper right', fontsize=8)
-    axs[0, 1].set_title("2. Intra-Chain Bridging Cl Count", fontsize=13, fontweight='bold')
-    axs[0, 2].set_title("3. Bridging Symmetry (Lower Δ = Better)", fontsize=13, fontweight='bold')
-
-    for col in range(3):
-        axs[-1, col].set_xlabel("Simulation Frame", fontsize=12)
-
-    plt.tight_layout()
-    fig2.savefig("Figure2_MD_Dynamics_Grid.png", dpi=300)
+        # [수정됨] 바깥으로 빠진 범례가 이미지 저장 시 잘리지 않도록 bbox_inches='tight' 추가
+        fig2.savefig("Figure2_MD_Dynamics_Grid.png", dpi=300, bbox_inches='tight')
 
 print("모든 작업이 완료되었습니다!")
 print("- 조성 데이터: composition_summary.csv / Figure1_Defect_Ratio.png")
