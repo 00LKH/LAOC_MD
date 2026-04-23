@@ -182,7 +182,7 @@ with plt.style.context(["science", "notebook"]):
     ax1.legend(loc='upper right', frameon=True, framealpha=0.7, edgecolor='white')
     
     plt.tight_layout()
-    # plt.show()
+    plt.show()
     fig1.savefig("Figure1_Defect_Ratio.png", dpi=300)
 
 # ==========================================
@@ -227,7 +227,7 @@ if num_plots > 0:
         axs[1].legend(fontsize=9, loc='upper left', bbox_to_anchor=(1.02, 1), frameon=True)
 
         plt.tight_layout()
-        # plt.show()
+        plt.show()
         
         # [수정됨] 바깥으로 빠진 범례가 이미지 저장 시 잘리지 않도록 bbox_inches='tight' 추가
         fig2.savefig("Figure2_MD_Dynamics_Grid.png", dpi=300, bbox_inches='tight')

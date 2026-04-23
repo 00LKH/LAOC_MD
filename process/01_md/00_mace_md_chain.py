@@ -43,6 +43,7 @@ rt_offset = 0.2
 if not hasattr(units, 'ps'):
     units.ps = 1000 * units.fs
 
+# base_dir = os.path.abspath(".")
 base_dir = os.path.abspath("mlmd_extxyz")
 
 # ==========================================
