@@ -31,8 +31,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # MD 파라미터
 temperature_K = 1200
 timestep_fs = 2.0
-nvt_steps = 1001
-log_interval = 10
+nvt_steps = 5001
+log_interval = 50
 nvt_tdamp_fs = 100
 
 # Hookean 제약 조건 파라미터
@@ -43,7 +43,7 @@ rt_offset = 0.2
 if not hasattr(units, 'ps'):
     units.ps = 1000 * units.fs
 
-base_dir = os.path.abspath(".")
+base_dir = os.path.abspath("mlmd_extxyz")
 
 # ==========================================
 # 2. Helper 함수 정의
